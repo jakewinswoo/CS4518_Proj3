@@ -6,10 +6,7 @@ import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
-<<<<<<< HEAD
 import android.widget.ImageView;
-=======
->>>>>>> origin/master
 import android.widget.Toast;
 
 import com.google.android.gms.location.ActivityRecognitionResult;
@@ -54,7 +51,6 @@ public class ActivityRecognizedService extends IntentService{
                 case DetectedActivity.IN_VEHICLE: {
                     Log.e( "ActivityRecogition", "In Vehicle: " + activity.getConfidence() );
                     if( activity.getConfidence() >= 75 ) {
-<<<<<<< HEAD
                         if(currentAct != 0){
                             currentAct = 0;
                             //change to in vehicle and do things
@@ -70,23 +66,12 @@ public class ActivityRecognizedService extends IntentService{
                             //update map with current location
                         }
 
-=======
-                        //Add sqlite insert
-                        //toast
-                        Context context = getApplicationContext();
-                        CharSequence vehicle_text = "Are you driving?";
-                        Toast vehicle_toast = Toast.makeText(context, vehicle_text, Toast.LENGTH_SHORT);
-                        vehicle_toast.show();
-                        //change image
-                        //update map with current location
->>>>>>> origin/master
                     }
                     break;
                 }
                 case DetectedActivity.RUNNING: {
                     Log.e( "ActivityRecogition", "Running: " + activity.getConfidence() );
                     if( activity.getConfidence() >= 75 ) {
-<<<<<<< HEAD
                         if(currentAct != 1){
                             currentAct = 1;
                             //Add sqlite insert
@@ -100,23 +85,12 @@ public class ActivityRecognizedService extends IntentService{
                             MainActivity.txtView.setText("You are running.");
                             //update map with current location
                         }
-=======
-                        //Add sqlite insert
-                        //toast
-                        Context context = getApplicationContext();
-                        CharSequence running_text = "Are you running?";
-                        Toast running_toast = Toast.makeText(context, running_text, Toast.LENGTH_SHORT);
-                        running_toast.show();
-                        //change image
-                        //update map with current location
->>>>>>> origin/master
                     }
                     break;
                 }
                 case DetectedActivity.STILL: {
                     Log.e( "ActivityRecogition", "Still: " + activity.getConfidence() );
                     if( activity.getConfidence() >= 75 ) {
-<<<<<<< HEAD
                         if(currentAct != 2){
                             currentAct = 2;
                             //Add sqlite insert
@@ -131,23 +105,12 @@ public class ActivityRecognizedService extends IntentService{
                             //update map with current location
                         }
 
-=======
-                        //Add sqlite insert
-                        //toast
-                        Context context = getApplicationContext();
-                        CharSequence still_text = "Are you still?";
-                        Toast still_toast = Toast.makeText(context, still_text, Toast.LENGTH_SHORT);
-                        still_toast.show();
-                        //change image
-                        //update map with current location
->>>>>>> origin/master
                     }
                     break;
                 }
                 case DetectedActivity.WALKING: {
                     Log.e( "ActivityRecogition", "Walking: " + activity.getConfidence() );
                     if( activity.getConfidence() >= 75 ) {
-<<<<<<< HEAD
                         if(currentAct != 3){
                             currentAct = 3;
                             //Add sqlite insert
@@ -162,16 +125,6 @@ public class ActivityRecognizedService extends IntentService{
                             //update map with current location
                         }
 
-=======
-                        //Add sqlite insert
-                        //toast
-                        Context context = getApplicationContext();
-                        CharSequence walking_text = "Are you walking?";
-                        Toast walking_toast = Toast.makeText(context, walking_text, Toast.LENGTH_SHORT);
-                        walking_toast.show();
-                        //change image
-                        //update map with current location
->>>>>>> origin/master
                     }
                     break;
                 }
